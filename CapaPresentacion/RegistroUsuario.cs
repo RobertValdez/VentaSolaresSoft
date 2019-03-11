@@ -27,7 +27,7 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
-
+        //
         public void ComprobarCedula(E_Usuarios CompCed)
         {
            if (N_Usuarios.N_rptComprobar(CompCed) == "0")
