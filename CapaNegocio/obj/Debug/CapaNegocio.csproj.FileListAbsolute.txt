@@ -1,0 +1,12 @@
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
