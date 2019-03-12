@@ -3,3 +3,4 @@ C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaEntid
 C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaEntidad\obj\Debug\CapaEntidad.pdb
 C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaEntidad\obj\Debug\CapaEntidad.csprojAssemblyReference.cache
