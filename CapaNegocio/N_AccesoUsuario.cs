@@ -18,5 +18,9 @@ namespace CapaNegocio
         {
             return D_AccespUsuario.D_ConcederAcceso(eAccUser);
         }
+        public string N_rspDatos_Usuario(E_AccesoUsuario eAccUser)
+        {
+          return  D_AccespUsuario.D_DatosEmpleado(eAccUser);
+        }
     }
 }

@@ -29,6 +29,9 @@ namespace CapaPresentacion
 
             if (N_AccesoUsuario.N_rspAccesoUsuario(E_AccesoUsuario).Equals(1))
             {
+                E_AccesoUsuario.Cedula = txtUsuario.Text; //devuelvo el nombre de usuario para regresar la cedula en su lugar.
+               MessageBox.Show(N_AccesoUsuario.N_rspDatos_Usuario(E_AccesoUsuario));
+
                 MenuPrincipal mP = new MenuPrincipal();
                 mP.Show();
                 this.Hide();
