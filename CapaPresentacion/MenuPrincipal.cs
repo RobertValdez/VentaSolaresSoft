@@ -12,6 +12,8 @@ namespace CapaPresentacion
 {
     public partial class MenuPrincipal : MetroFramework.Forms.MetroForm
     {
+        public string CedulaEmpleado = "";
+
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace CapaPresentacion
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
             Facturacion f = new Facturacion();
+            f.CedulaEmpleado = CedulaEmpleado;
             f.ShowDialog();
         }
 

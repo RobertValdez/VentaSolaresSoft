@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
     <Compile Include="D_AccesoUsuario.cs" />
+    <Compile Include="D_BuscarCliente.cs" />
     <Compile Include="D_Facturacion.cs" />
     <Compile Include="D_Solares.cs" />
     <Compile Include="D_Usuarios.cs" />
@@ -65,6 +68,5 @@
       <Name>CapaEntidad</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

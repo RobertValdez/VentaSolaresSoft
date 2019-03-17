@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class E_MenuPrincipal
+    public class E_MenuPrincipal // En desuso
     {
         private string _CedulaEmpleado;
 

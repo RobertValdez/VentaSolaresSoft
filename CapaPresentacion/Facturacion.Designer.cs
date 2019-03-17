@@ -386,7 +386,6 @@
             // 
             this.txtNotario.Location = new System.Drawing.Point(192, 95);
             this.txtNotario.Name = "txtNotario";
-            this.txtNotario.ReadOnly = true;
             this.txtNotario.Size = new System.Drawing.Size(352, 26);
             this.txtNotario.TabIndex = 4;
             // 
@@ -477,11 +476,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(159, 102);
+            this.label12.Location = new System.Drawing.Point(151, 102);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 15);
+            this.label12.Size = new System.Drawing.Size(43, 15);
             this.label12.TabIndex = 3;
-            this.label12.Text = "(id)";
+            this.label12.Text = "(Ced.)";
             // 
             // label11
             // 
@@ -497,21 +496,21 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(159, 71);
+            this.label10.Location = new System.Drawing.Point(151, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 15);
+            this.label10.Size = new System.Drawing.Size(43, 15);
             this.label10.TabIndex = 3;
-            this.label10.Text = "(id)";
+            this.label10.Text = "(Ced.)";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lucida Fax", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(159, 40);
+            this.label8.Location = new System.Drawing.Point(151, 40);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 15);
+            this.label8.Size = new System.Drawing.Size(43, 15);
             this.label8.TabIndex = 3;
-            this.label8.Text = "(id)";
+            this.label8.Text = "(Ced.)";
             // 
             // label2
             // 

@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaEntidad;
+using CapaNegocio;
+
 namespace CapaPresentacion
 {
     public partial class Facturacion : MetroFramework.Forms.MetroForm
     {
+        public string CedulaEmpleado = "";
+
         static string IdSolar, NumCerTit, Coor, Numero, Precio;
+        static string strBuscarCliente;
         Int32 precio = 0;
         public Facturacion()
         {
@@ -29,10 +35,14 @@ namespace CapaPresentacion
             Numero = busNumero;
             Precio = busPrecio;
         }
+        public Facturacion(string buscarCliente)
+        {
+            strBuscarCliente = buscarCliente;
+        }
 
         private void Facturacion_Load(object sender, EventArgs e)
         {
-
+            txtVendedor.Text = CedulaEmpleado;
         }
 
         private void tmpFechaHora_Tick(object sender, EventArgs e)
@@ -61,7 +71,11 @@ namespace CapaPresentacion
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
+            BuscarClientes bc = new BuscarClientes();
+            bc.frmFacturacion = true;
+            bc.ShowDialog();
 
+            txtCliente.Text = strBuscarCliente;
         }
 
         private void button2_Click(object sender, EventArgs e)
