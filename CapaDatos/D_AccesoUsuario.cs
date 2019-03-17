@@ -54,27 +54,15 @@ namespace CapaDatos
 
             SqlCommand cmd = new SqlCommand("Datos_Usuario", strCon);
 
-            SqlParameter Return = new SqlParameter();
-            Return.ParameterName = "@Cedula";
-            Return.SqlDbType = SqlDbType.VarChar;
-            Return.Direction = ParameterDirection.ReturnValue;
-            Return.Size = 15;
-            Return.Value = eUser.Cedula;
-            cmd.Parameters.Add(Return);
-
             SqlParameter Cedula = new SqlParameter();
             Cedula.ParameterName = "@Cedula";
-            Cedula.SqlDbType = SqlDbType.VarChar;
-            Cedula.Size = 15;
             Cedula.Value = eUser.Cedula;
             cmd.Parameters.Add(Cedula);
 
             strCon.Open();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.ExecuteNonQuery();
 
-            string rsp = Convert.ToString(cmd.Parameters["@Cedula"].Value);
-            return rsp;
+            return cmd.ExecuteScalar().ToString();
         }
     }
 }

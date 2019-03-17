@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="E_AccesoUsuario.cs" />
     <Compile Include="E_Facturacion.cs" />
+    <Compile Include="E_MenuPrincipal.cs" />
     <Compile Include="E_Solares.cs" />
     <Compile Include="E_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

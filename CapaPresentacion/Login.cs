@@ -17,6 +17,7 @@ namespace CapaPresentacion
     {
         E_AccesoUsuario E_AccesoUsuario = new E_AccesoUsuario();
         N_AccesoUsuario N_AccesoUsuario = new N_AccesoUsuario();
+        E_MenuPrincipal E_MenuPrincipal = new E_MenuPrincipal();
         public Login()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace CapaPresentacion
             if (N_AccesoUsuario.N_rspAccesoUsuario(E_AccesoUsuario).Equals(1))
             {
                 E_AccesoUsuario.Cedula = txtUsuario.Text; //devuelvo el nombre de usuario para regresar la cedula en su lugar.
-               MessageBox.Show(N_AccesoUsuario.N_rspDatos_Usuario(E_AccesoUsuario));
+                E_MenuPrincipal.CedulaEmpleado = N_AccesoUsuario.N_rspDatos_DatosEmpleado(E_AccesoUsuario); // Paso la cedulo devuelta a la Entidad MenuPrincipal para ser operada.
 
                 MenuPrincipal mP = new MenuPrincipal();
                 mP.Show();
