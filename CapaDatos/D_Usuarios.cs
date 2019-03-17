@@ -15,7 +15,6 @@ namespace CapaDatos
         public string D_ComprobarCed(E_Usuarios eUser)
         {
             SqlConnection strCon = new SqlConnection();
-            DataTable dt = new DataTable();
             strCon.ConnectionString = Conexion.SqlConex;
 
             SqlCommand cmd = new SqlCommand("UsComprobar_CedulaEmpl", strCon);
@@ -44,7 +43,6 @@ namespace CapaDatos
         public string D_ComprobarNombreUser(E_Usuarios eUser)
         {
             SqlConnection strCon = new SqlConnection();
-            DataTable dt = new DataTable();
             strCon.ConnectionString = Conexion.SqlConex;
 
             SqlCommand cmd = new SqlCommand("UsComprobar_NombreUser", strCon);
