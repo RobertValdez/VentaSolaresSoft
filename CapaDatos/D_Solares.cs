@@ -26,19 +26,6 @@ namespace CapaDatos
             return dt;
         }
 
-        //public string a()
-        //{
-        //    connection.Open();
-        //    SqlCommand command1 = new SqlCommand("select imgfile from myimages where imgname=@param", connection);
-        //    SqlParameter myparam = command1.Parameters.Add("@param", SqlDbType.NVarChar, 30);
-        //    myparam.Value = txtimgname.Text;
-        //    byte[] img = (byte[])command1.ExecuteScalar();
-        //    MemoryStream str = new MemoryStream();
-        //    str.Write(img, 0, img.Length);
-        //    Bitmap bit = new Bitmap(str);
-        //    connection.Close();
-        //}
-
         public int InsertarSolar(E_Solares eSolar)
         {
             SqlConnection strcon = new SqlConnection();
