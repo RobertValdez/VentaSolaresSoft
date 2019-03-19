@@ -15,6 +15,9 @@ namespace CapaPresentacion
 {
     public partial class Facturacion : MetroFramework.Forms.MetroForm
     {
+        N_Facturacion N_Facturacion = new N_Facturacion();
+        E_Facturacion E_Facturacion = new E_Facturacion();
+
         public string CedulaEmpleado = "";
 
         static string IdSolar, NumCerTit, Coor, Numero, Precio;
@@ -43,6 +46,12 @@ namespace CapaPresentacion
         private void Facturacion_Load(object sender, EventArgs e)
         {
             txtVendedor.Text = CedulaEmpleado;
+
+            txtTiempoAPagar.Visible = false;
+            lblTiempoAPagar.Visible = false;
+            lblMesesApagar.Visible = false;
+            txtInicial.Visible = false;
+            chkConInicial.Visible = false;
         }
 
         private void tmpFechaHora_Tick(object sender, EventArgs e)
@@ -86,11 +95,66 @@ namespace CapaPresentacion
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            
+            //try
+            //{
+                InsertarCompra();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
+
+        private void rbActoDefinitivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbActoDefinitivo.Checked)
+            {
+                txtTiempoAPagar.Visible = false;
+                lblTiempoAPagar.Visible = false;
+                lblMesesApagar.Visible = false;
+                txtInicial.Visible = false;
+                chkConInicial.Visible = false;
+                chkConInicial.Checked = false;
+            }
+        }
+
+        private void rbActoProvisional_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbActoProvisional.Checked)
+            {
+                txtTiempoAPagar.Visible = true;
+                lblTiempoAPagar.Visible = true;
+                lblMesesApagar.Visible = true;
+                txtInicial.Visible = true;
+                chkConInicial.Visible = true;
+            }
+        }
+
         private void InsertarCompra()
         {
-            
+            E_Facturacion.Ced_Solar = Convert.ToInt64(lstvAgregarSolar.Items[0].SubItems[3].Text);
+            E_Facturacion.Cliente = Convert.ToInt16(txtCliente.Text);
+            E_Facturacion.Vendedor = Convert.ToInt32(txtVendedor.Text);
+            E_Facturacion.Inicial = Convert.ToInt32(txtInicial.Text);
+            E_Facturacion.SubTotal = Convert.ToInt32(txtSubtotal.Text);
+
+            if (txtDescuento.Text.Equals(""))
+            {
+                E_Facturacion.Descuento = 0;// (txtDescuento.Text);
+            }
+            else
+            {
+                E_Facturacion.Descuento = Convert.ToInt16(txtDescuento.Text);
+            }
+
+            E_Facturacion.Total = Convert.ToInt32(txtTotal.Text);
+            E_Facturacion.Cuotas = Convert.ToInt16(txtTiempoAPagar.Text);
+            E_Facturacion.Notario = Convert.ToInt32(txtNotario.Text);
+            E_Facturacion.Abogado = txtAbogado.Text;
+            E_Facturacion.Fecha = DateTime.Today;
+
+
+             MessageBox.Show(""+ N_Facturacion.N_InsertarCompra(E_Facturacion));
         }
 
         private void btnBuscarSolar_Click(object sender, EventArgs e)

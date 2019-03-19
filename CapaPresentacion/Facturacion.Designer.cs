@@ -42,22 +42,13 @@
             this.rbActoDefinitivo = new System.Windows.Forms.RadioButton();
             this.rbActoProvisional = new System.Windows.Forms.RadioButton();
             this.dgvAñadirCompra = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnAñadirCompra = new System.Windows.Forms.Button();
             this.txtFacturar = new System.Windows.Forms.Button();
             this.txtCotizarSolar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNotario = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnBuscarSolar = new System.Windows.Forms.Button();
             this.txtNotario = new System.Windows.Forms.TextBox();
@@ -77,18 +68,29 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tmpFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.txtTiempoAPagar = new System.Windows.Forms.TextBox();
+            this.lblTiempoAPagar = new System.Windows.Forms.Label();
+            this.lblMesesApagar = new System.Windows.Forms.Label();
+            this.txtInicial = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkConInicial = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAñadirCompra)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkConInicial);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.txtInicial);
+            this.groupBox1.Controls.Add(this.txtTiempoAPagar);
+            this.groupBox1.Controls.Add(this.lblTiempoAPagar);
             this.groupBox1.Controls.Add(this.lstvAgregarSolar);
+            this.groupBox1.Controls.Add(this.lblMesesApagar);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.rbActoDefinitivo);
-            this.groupBox1.Controls.Add(this.rbActoProvisional);
             this.groupBox1.Controls.Add(this.dgvAñadirCompra);
             this.groupBox1.Controls.Add(this.lblHora);
             this.groupBox1.Controls.Add(this.lblFecha);
@@ -96,7 +98,7 @@
             this.groupBox1.Controls.Add(this.txtFacturar);
             this.groupBox1.Controls.Add(this.txtCotizarSolar);
             this.groupBox1.Controls.Add(this.btnBorrar);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnNotario);
             this.groupBox1.Controls.Add(this.btnCliente);
             this.groupBox1.Controls.Add(this.btnBuscarSolar);
             this.groupBox1.Controls.Add(this.txtNotario);
@@ -119,7 +121,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Lucida Fax", 12F);
             this.groupBox1.Location = new System.Drawing.Point(20, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1029, 565);
+            this.groupBox1.Size = new System.Drawing.Size(1073, 565);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -197,101 +199,38 @@
             // rbActoDefinitivo
             // 
             this.rbActoDefinitivo.AutoSize = true;
-            this.rbActoDefinitivo.Location = new System.Drawing.Point(785, 164);
+            this.rbActoDefinitivo.Location = new System.Drawing.Point(3, 16);
             this.rbActoDefinitivo.Name = "rbActoDefinitivo";
             this.rbActoDefinitivo.Size = new System.Drawing.Size(272, 22);
             this.rbActoDefinitivo.TabIndex = 10;
             this.rbActoDefinitivo.TabStop = true;
             this.rbActoDefinitivo.Text = "ACTO  DE  VENTA DEFINITIVO ";
             this.rbActoDefinitivo.UseVisualStyleBackColor = true;
+            this.rbActoDefinitivo.CheckedChanged += new System.EventHandler(this.rbActoDefinitivo_CheckedChanged);
             // 
             // rbActoProvisional
             // 
             this.rbActoProvisional.AutoSize = true;
-            this.rbActoProvisional.Location = new System.Drawing.Point(785, 192);
+            this.rbActoProvisional.Location = new System.Drawing.Point(3, 44);
             this.rbActoProvisional.Name = "rbActoProvisional";
             this.rbActoProvisional.Size = new System.Drawing.Size(272, 22);
             this.rbActoProvisional.TabIndex = 10;
             this.rbActoProvisional.TabStop = true;
             this.rbActoProvisional.Text = "ACTO DE VENTA PROVISIONAL";
             this.rbActoProvisional.UseVisualStyleBackColor = true;
+            this.rbActoProvisional.CheckedChanged += new System.EventHandler(this.rbActoProvisional_CheckedChanged);
             // 
             // dgvAñadirCompra
             // 
             this.dgvAñadirCompra.AllowUserToAddRows = false;
             this.dgvAñadirCompra.AllowUserToDeleteRows = false;
             this.dgvAñadirCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAñadirCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9});
-            this.dgvAñadirCompra.Location = new System.Drawing.Point(6, 284);
+            this.dgvAñadirCompra.Location = new System.Drawing.Point(6, 328);
             this.dgvAñadirCompra.Name = "dgvAñadirCompra";
             this.dgvAñadirCompra.ReadOnly = true;
             this.dgvAñadirCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAñadirCompra.Size = new System.Drawing.Size(1051, 349);
+            this.dgvAñadirCompra.Size = new System.Drawing.Size(1051, 305);
             this.dgvAñadirCompra.TabIndex = 9;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "VENDEDOR";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "CLIENTE";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "NOTARIO";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ABOGADO";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "SOLARES";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "SUBTOTAL";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "DESCUENTO";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "TOTAL";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "FECHA";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
             // 
             // lblHora
             // 
@@ -352,15 +291,15 @@
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // button2
+            // btnNotario
             // 
-            this.button2.Location = new System.Drawing.Point(549, 96);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "NOTARIO";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnCliente_Click);
+            this.btnNotario.Enabled = false;
+            this.btnNotario.Location = new System.Drawing.Point(549, 96);
+            this.btnNotario.Name = "btnNotario";
+            this.btnNotario.Size = new System.Drawing.Size(106, 23);
+            this.btnNotario.TabIndex = 6;
+            this.btnNotario.Text = "NOTARIO";
+            this.btnNotario.UseVisualStyleBackColor = true;
             // 
             // btnCliente
             // 
@@ -525,11 +464,64 @@
             // 
             this.tmpFechaHora.Tick += new System.EventHandler(this.tmpFechaHora_Tick);
             // 
+            // txtTiempoAPagar
+            // 
+            this.txtTiempoAPagar.Location = new System.Drawing.Point(256, 257);
+            this.txtTiempoAPagar.Name = "txtTiempoAPagar";
+            this.txtTiempoAPagar.Size = new System.Drawing.Size(148, 26);
+            this.txtTiempoAPagar.TabIndex = 7;
+            // 
+            // lblTiempoAPagar
+            // 
+            this.lblTiempoAPagar.AutoSize = true;
+            this.lblTiempoAPagar.Location = new System.Drawing.Point(37, 260);
+            this.lblTiempoAPagar.Name = "lblTiempoAPagar";
+            this.lblTiempoAPagar.Size = new System.Drawing.Size(146, 18);
+            this.lblTiempoAPagar.TabIndex = 6;
+            this.lblTiempoAPagar.Text = "TIEMPO DE PAGO";
+            // 
+            // lblMesesApagar
+            // 
+            this.lblMesesApagar.AutoSize = true;
+            this.lblMesesApagar.Font = new System.Drawing.Font("Lucida Fax", 8.25F);
+            this.lblMesesApagar.Location = new System.Drawing.Point(185, 262);
+            this.lblMesesApagar.Name = "lblMesesApagar";
+            this.lblMesesApagar.Size = new System.Drawing.Size(72, 14);
+            this.lblMesesApagar.TabIndex = 8;
+            this.lblMesesApagar.Text = "(por meses)";
+            // 
+            // txtInicial
+            // 
+            this.txtInicial.Location = new System.Drawing.Point(188, 292);
+            this.txtInicial.Name = "txtInicial";
+            this.txtInicial.Size = new System.Drawing.Size(216, 26);
+            this.txtInicial.TabIndex = 7;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbActoDefinitivo);
+            this.groupBox2.Controls.Add(this.rbActoProvisional);
+            this.groupBox2.Location = new System.Drawing.Point(780, 150);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(277, 73);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            // 
+            // chkConInicial
+            // 
+            this.chkConInicial.AutoSize = true;
+            this.chkConInicial.Location = new System.Drawing.Point(40, 294);
+            this.chkConInicial.Name = "chkConInicial";
+            this.chkConInicial.Size = new System.Drawing.Size(129, 22);
+            this.chkConInicial.TabIndex = 14;
+            this.chkConInicial.Text = "CON INICIAL";
+            this.chkConInicial.UseVisualStyleBackColor = true;
+            // 
             // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1069, 645);
+            this.ClientSize = new System.Drawing.Size(1113, 645);
             this.Controls.Add(this.groupBox1);
             this.Name = "Facturacion";
             this.Style = MetroFramework.MetroColorStyle.Green;
@@ -538,6 +530,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAñadirCompra)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -582,15 +576,12 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Button btnNotario;
+        private System.Windows.Forms.TextBox txtTiempoAPagar;
+        private System.Windows.Forms.Label lblTiempoAPagar;
+        private System.Windows.Forms.Label lblMesesApagar;
+        private System.Windows.Forms.TextBox txtInicial;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox chkConInicial;
     }
 }
