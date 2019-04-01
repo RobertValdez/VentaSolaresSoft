@@ -30,7 +30,7 @@ namespace CapaPresentacion
         }
 
         public Facturacion(string busIdSolar, string busNumCerTit,
-            string busCoor, string busNumero, string busPrecio)
+             string busNumero, string busCoor, string busPrecio)
         {
             IdSolar = busIdSolar;
             NumCerTit = busNumCerTit;
@@ -45,6 +45,8 @@ namespace CapaPresentacion
 
         private void Facturacion_Load(object sender, EventArgs e)
         {
+            dgvAñadirCompra.DataSource = N_Facturacion.MostrarCompraPendiente();
+
             txtVendedor.Text = CedulaEmpleado;
 
             txtTiempoAPagar.Visible = false;
@@ -95,14 +97,14 @@ namespace CapaPresentacion
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 InsertarCompra();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void rbActoDefinitivo_CheckedChanged(object sender, EventArgs e)
@@ -140,7 +142,7 @@ namespace CapaPresentacion
 
             if (txtDescuento.Text.Equals(""))
             {
-                E_Facturacion.Descuento = 0;// (txtDescuento.Text);
+                E_Facturacion.Descuento = 0;
             }
             else
             {
@@ -153,8 +155,10 @@ namespace CapaPresentacion
             E_Facturacion.Abogado = txtAbogado.Text;
             E_Facturacion.Fecha = DateTime.Today;
 
-
-             MessageBox.Show(""+ N_Facturacion.N_InsertarCompra(E_Facturacion));
+            if (N_Facturacion.N_InsertarCompra(E_Facturacion).Equals(1))
+            {
+               dgvAñadirCompra.DataSource = N_Facturacion.MostrarCompraPendiente();
+            } 
         }
 
         private void btnBuscarSolar_Click(object sender, EventArgs e)

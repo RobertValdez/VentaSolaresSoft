@@ -38,13 +38,14 @@
             this.btnAdministrador = new MetroFramework.Controls.MetroTile();
             this.btnAcercaDe = new MetroFramework.Controls.MetroTile();
             this.btnNotarios = new MetroFramework.Controls.MetroTile();
+            this.btnCuotas = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // btnFacturacion
             // 
             this.btnFacturacion.ActiveControl = null;
             this.btnFacturacion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnFacturacion.Location = new System.Drawing.Point(285, 169);
+            this.btnFacturacion.Location = new System.Drawing.Point(206, 169);
             this.btnFacturacion.Name = "btnFacturacion";
             this.btnFacturacion.Size = new System.Drawing.Size(338, 140);
             this.btnFacturacion.Style = MetroFramework.MetroColorStyle.Green;
@@ -60,7 +61,7 @@
             // 
             this.btnClientes.ActiveControl = null;
             this.btnClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClientes.Location = new System.Drawing.Point(842, 315);
+            this.btnClientes.Location = new System.Drawing.Point(894, 315);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(207, 140);
             this.btnClientes.Style = MetroFramework.MetroColorStyle.Green;
@@ -76,7 +77,7 @@
             // 
             this.btnSolares.ActiveControl = null;
             this.btnSolares.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSolares.Location = new System.Drawing.Point(285, 315);
+            this.btnSolares.Location = new System.Drawing.Point(206, 315);
             this.btnSolares.Name = "btnSolares";
             this.btnSolares.Size = new System.Drawing.Size(338, 140);
             this.btnSolares.Style = MetroFramework.MetroColorStyle.Green;
@@ -92,7 +93,7 @@
             // 
             this.btnEmpleados.ActiveControl = null;
             this.btnEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEmpleados.Location = new System.Drawing.Point(629, 315);
+            this.btnEmpleados.Location = new System.Drawing.Point(550, 315);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(207, 140);
             this.btnEmpleados.Style = MetroFramework.MetroColorStyle.Green;
@@ -108,7 +109,7 @@
             // 
             this.btnRegistroCompras.ActiveControl = null;
             this.btnRegistroCompras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistroCompras.Location = new System.Drawing.Point(760, 169);
+            this.btnRegistroCompras.Location = new System.Drawing.Point(550, 169);
             this.btnRegistroCompras.Name = "btnRegistroCompras";
             this.btnRegistroCompras.Size = new System.Drawing.Size(289, 140);
             this.btnRegistroCompras.Style = MetroFramework.MetroColorStyle.Green;
@@ -124,7 +125,7 @@
             // 
             this.btnUsuarios.ActiveControl = null;
             this.btnUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUsuarios.Location = new System.Drawing.Point(629, 169);
+            this.btnUsuarios.Location = new System.Drawing.Point(763, 315);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(125, 140);
             this.btnUsuarios.Style = MetroFramework.MetroColorStyle.Green;
@@ -140,7 +141,7 @@
             // 
             this.btnPropietarios.ActiveControl = null;
             this.btnPropietarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPropietarios.Location = new System.Drawing.Point(547, 461);
+            this.btnPropietarios.Location = new System.Drawing.Point(596, 461);
             this.btnPropietarios.Name = "btnPropietarios";
             this.btnPropietarios.Size = new System.Drawing.Size(289, 140);
             this.btnPropietarios.Style = MetroFramework.MetroColorStyle.Green;
@@ -155,9 +156,9 @@
             // 
             this.btnAdministrador.ActiveControl = null;
             this.btnAdministrador.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdministrador.Location = new System.Drawing.Point(416, 461);
+            this.btnAdministrador.Location = new System.Drawing.Point(426, 461);
             this.btnAdministrador.Name = "btnAdministrador";
-            this.btnAdministrador.Size = new System.Drawing.Size(125, 140);
+            this.btnAdministrador.Size = new System.Drawing.Size(164, 140);
             this.btnAdministrador.Style = MetroFramework.MetroColorStyle.Green;
             this.btnAdministrador.TabIndex = 0;
             this.btnAdministrador.Text = "Administrador";
@@ -170,7 +171,7 @@
             // 
             this.btnAcercaDe.ActiveControl = null;
             this.btnAcercaDe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAcercaDe.Location = new System.Drawing.Point(842, 461);
+            this.btnAcercaDe.Location = new System.Drawing.Point(894, 461);
             this.btnAcercaDe.Name = "btnAcercaDe";
             this.btnAcercaDe.Size = new System.Drawing.Size(207, 140);
             this.btnAcercaDe.Style = MetroFramework.MetroColorStyle.Green;
@@ -185,9 +186,9 @@
             // 
             this.btnNotarios.ActiveControl = null;
             this.btnNotarios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNotarios.Location = new System.Drawing.Point(285, 461);
+            this.btnNotarios.Location = new System.Drawing.Point(206, 461);
             this.btnNotarios.Name = "btnNotarios";
-            this.btnNotarios.Size = new System.Drawing.Size(125, 140);
+            this.btnNotarios.Size = new System.Drawing.Size(214, 140);
             this.btnNotarios.Style = MetroFramework.MetroColorStyle.Green;
             this.btnNotarios.TabIndex = 0;
             this.btnNotarios.Text = "Notarios";
@@ -196,11 +197,28 @@
             this.btnNotarios.UseSelectable = true;
             this.btnNotarios.UseTileImage = true;
             // 
+            // btnCuotas
+            // 
+            this.btnCuotas.ActiveControl = null;
+            this.btnCuotas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCuotas.Location = new System.Drawing.Point(845, 169);
+            this.btnCuotas.Name = "btnCuotas";
+            this.btnCuotas.Size = new System.Drawing.Size(256, 140);
+            this.btnCuotas.Style = MetroFramework.MetroColorStyle.Green;
+            this.btnCuotas.TabIndex = 0;
+            this.btnCuotas.Text = "Cuotas";
+            this.btnCuotas.TileImage = global::CapaPresentacion.Properties.Resources.ico_carro;
+            this.btnCuotas.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCuotas.UseSelectable = true;
+            this.btnCuotas.UseTileImage = true;
+            this.btnCuotas.Click += new System.EventHandler(this.btnCuotas_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1279, 733);
+            this.Controls.Add(this.btnCuotas);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnNotarios);
             this.Controls.Add(this.btnSolares);
@@ -235,5 +253,6 @@
         private MetroFramework.Controls.MetroTile btnAdministrador;
         private MetroFramework.Controls.MetroTile btnAcercaDe;
         private MetroFramework.Controls.MetroTile btnNotarios;
+        private MetroFramework.Controls.MetroTile btnCuotas;
     }
 }

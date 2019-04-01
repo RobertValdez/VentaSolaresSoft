@@ -13,6 +13,18 @@ namespace CapaDatos
 {
     public class D_Facturacion
     {
+        public DataTable MostrarCompraPendiente()
+        {
+            SqlConnection strCon = new SqlConnection();
+            strCon.ConnectionString = Conexion.SqlConex;
+            SqlCommand cmd = new SqlCommand("Mostrar_Compra_Pendiente", strCon);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         public int InsertarCompra(E_Facturacion eFact)
         {
             SqlConnection strcon = new SqlConnection();

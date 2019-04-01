@@ -111,6 +111,7 @@ namespace CapaPresentacion
         {
             float Inicial = (float)subTotal * 0.30f;
             return Inicial;
+            //Esta formula es un valor que puede cambiar según las normas de cada lugar de ventas de solares
         }
         private float CotizarMora(float valorMes)
         {

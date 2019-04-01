@@ -15,10 +15,14 @@ namespace CapaNegocio
         E_Facturacion E_Facturacion = new E_Facturacion();
         D_Facturacion D_Facturacion = new D_Facturacion();
 
+        public DataTable MostrarCompraPendiente()
+        {
+            return D_Facturacion.MostrarCompraPendiente();
+        }
+
         public int N_InsertarCompra(E_Facturacion eFact)
         {
-            int rsp = D_Facturacion.InsertarCompra(eFact);
-            return rsp;
+            return D_Facturacion.InsertarCompra(eFact);
         }
     }
 }

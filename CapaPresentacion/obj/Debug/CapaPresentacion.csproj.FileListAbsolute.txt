@@ -31,3 +31,4 @@ C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaPrese
 C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaPresentacion\bin\Debug\MetroFramework.dll
 C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaPresentacion\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaPresentacion\obj\Debug\CapaPresentacion.BuscarClientes.resources
+C:\Users\Robert\documents\visual studio 2017\Projects\VentaSolaresSoft\CapaPresentacion\obj\Debug\CapaPresentacion.Cuotas.resources
